@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quiz App</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- bootsterap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+        <!-- materialize -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
+    </head>
+    <body>
+
+<div class="container">
+
+    <div class="row justify-content-center pt-5">
+
+        <button id="btn" class="btn btn-outline-dark btn-lg" type="button" onclick="startQuiz()">Start Quiz</button>
+
+    </div>
+
+    <div class="row justify-content-center list-group m-2">
+        <div id="question-container"></div>
+    </div>
+    <div class="row justify-content-center list-group m-2">
+        <div id="choice-container"></div>
+    </div>
+    <div class="row justify-content-center m-2">
+        <div id="answer-container"></div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="card" id="result-container">
+        </div>
+    </div>
+
+    <div class="row justify-content-center m-2 p-2">
+        <div class="card" id="time-container">
+        </div>
+    </div>
+
+
+</div>
+<script src="elastic-apm-rum.umd.min.js" crossorigin></script>
+<script>
+      elasticApm.init({
+      serviceName: 'Quiz',
+      serverUrl: 'https://tesr.apm.us-central1.gcp.cloud.es.io',
+      })
+</script>
+          <script src="script.js"></script>
+      </body>
+  </html>
